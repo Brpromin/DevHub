@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: #0a0a0f;
+  color: #e0e0e0;
+  font-family: 'Syne', sans-serif;
+  min-height: 100vh;
+}
+
+.container { max-width: 640px; margin: 0 auto; padding: 60px 20px; }
+
+.header { text-align: center; margin-bottom: 48px; }
+
+.logo { font-size: 3rem; font-weight: 800; letter-spacing: -1px; color: #ffffff; }
+
+.logo span { color: #00e5ff; }
+
+.subtitle { color: #555; margin-top: 8px; font-size: 0.95rem; letter-spacing: 2px; text-transform: uppercase; }
+
+.search-box { display: flex; gap: 12px; margin-bottom: 32px; }
+
+.input {
+  flex: 1;
+  background: #111118;
+  border: 1px solid #222230;
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: #e0e0e0;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus { border-color: #00e5ff; }
+
+.btn {
+  background: #00e5ff;
+  color: #0a0a0f;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover { opacity: 0.85; }
+
+.status { text-align: center; color: #555; font-family: 'Space Mono', monospace; }
+
+.erro { text-align: center; color: #ff4d4d; font-family: 'Space Mono', monospace; }
+
+.card {
+  background: #111118;
+  border: 1px solid #1e1e2e;
+  border-radius: 16px;
+  padding: 32px;
+  animation: fadeIn 0.4s ease;
+}
+
+.card-top { display: flex; gap: 24px; align-items: flex-start; margin-bottom: 32px; }
+
+.avatar { width: 90px; height: 90px; border-radius: 50%; border: 2px solid #00e5ff; }
+
+.info h2 { font-size: 1.3rem; font-weight: 700; color: #ffffff; }
+
+.login { color: #00e5ff; font-family: 'Space Mono', monospace; font-size: 0.85rem; margin: 4px 0 10px; }
+
+.bio { color: #888; font-size: 0.9rem; line-height: 1.5; }
+
+.github-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00e5ff;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border: 1px solid #00e5ff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+.github-link:hover { background: #00e5ff; color: #0a0a0f; }
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #1e1e2e;
+  padding-top: 24px;
+  margin-bottom: 24px;
+}
+
+.stat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+
+.stat-num { font-size: 1.5rem; font-weight: 800; color: #ffffff; }
+
+.stat-label { font-size: 0.75rem; color: #555; text-transform: uppercase; letter-spacing: 1px; }
+
+.repos { border-top: 1px solid #1e1e2e; padding-top: 24px; }
+
+.repos-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: #555; margin-bottom: 16px; }
+
+.repos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.repo-card {
+  background: #0a0a0f;
+  border: 1px solid #1e1e2e;
+  border-radius: 10px;
+  padding: 12px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 0.2s;
+}
+
+.repo-card:hover { border-color: #00e5ff; }
+
+.repo-name { color: #ffffff; font-size: 0.85rem; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.repo-desc { color: #555; font-size: 0.75rem; line-height: 1.4; }
+
+.repo-stars { color: #00e5ff; font-size: 0.75rem; font-family: 'Space Mono', monospace; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lang-barra-total {
+  display: flex;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  gap: 2px;
+}
+
+.lang-barra-segmento {
+  height: 100%;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+}
+
+.lang-barra-segmento:hover { opacity: 0.8; }
+
+.lang-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.lang-nome {
+  font-size: 0.8rem;
+  color: #e0e0e0;
+}
+
+.lang-percent {
+  font-size: 0.75rem;
+  color: #555;
+  font-family: 'Space Mono', monospace;
+}
